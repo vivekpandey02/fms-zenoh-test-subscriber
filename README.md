@@ -11,12 +11,12 @@ rm -f $PROTOC_ZIP
 
 ## Compiling Your Protocol Buffers
 ```
-> protoc -I=$SRC_DIR --python_out=$DST_DIR $SRC_DIR/fms.proto
+protoc -I=$SRC_DIR --python_out=$DST_DIR $SRC_DIR/fms.proto
 For example
-> sudo protoc -I=. --python_out=. fms.proto --experimental_allow_proto3_optional
+sudo protoc -I=. --python_out=. fms.proto --experimental_allow_proto3_optional
 ```
 
 ## Run the Subscriber Code
 ```
-> python3 fms_z_sub.py -m "peer" -k "fms/vehicleStatus"
+python3 fms_z_sub.py -m "peer" -k "fms/vehicleStatus"
 ```
